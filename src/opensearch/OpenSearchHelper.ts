@@ -48,7 +48,7 @@ export class OpensearchHelper {
               },
             },
           ],
-          minimum_should_match: 1,
+          minimum_should_match: 0,
         },
       },
       sort: {

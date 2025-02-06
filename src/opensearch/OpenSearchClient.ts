@@ -1,5 +1,7 @@
 import axios, { AxiosInstance } from "axios";
 import { TokenDbItem } from "./types";
+import * as dotenv from "dotenv";
+dotenv.config();
 
 export const newAbortSignal = (timeoutMs: number): AbortSignal => {
   const abortController = new AbortController();
@@ -19,8 +21,7 @@ export enum OpensearchType {
   SEARCH = "_search",
 }
 
-const OPENSEARCH_HOST =
-  "search-searchdomainfdc-kbdrascuhxfw-3xyk36pktkk62utsj2ovvexsra.us-east-2.es.amazonaws.com";
+const OPENSEARCH_HOST = process.env.OPENSEARCH_HOST;
 export const OPENSEARCH_TOKEN_DOC_URL = `https://${OPENSEARCH_HOST}/${OpensearchIndex.TOKENS}/${OpensearchType.DOC}`;
 export const OPENSEARCH_TOKEN_SEARCH_URL = `https://${OPENSEARCH_HOST}/${OpensearchIndex.TOKENS}/${OpensearchType.SEARCH}`;
 
