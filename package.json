@@ -1,0 +1,33 @@
+{
+  "name": "finance-script",
+  "version": "1.0.0",
+  "description": "query spam tokens from input csv and output csv",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch-compile": "tsc -w",
+    "compile": "tsc"
+  },
+  "author": "Robert Seitz",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/lodash": "^4.17.13",
+    "@types/node": "^22.10.2",
+    "tsc": "^2.0.4",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "@typechain/ethers-v5": "^11.1.2",
+    "@uniswap/sdk-core": "^6.1.1",
+    "aws-sdk": "^2.1692.0",
+    "aws4-axios": "^3.3.14",
+    "axios": "^1.7.9",
+    "csv": "^6.3.11",
+    "csv-parse": "^5.6.0",
+    "dotenv": "^16.4.7",
+    "dynamodb-local": "^0.0.35",
+    "ethers": "^5.7.2",
+    "lodash": "^4.17.21",
+    "underscore": "^1.13.7"
+  }
+}
